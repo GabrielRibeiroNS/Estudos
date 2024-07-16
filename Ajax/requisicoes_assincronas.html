@@ -23,7 +23,9 @@
 			console.log(ajax.readyState)
 
 			//alguma logica que olhe o progresso da requisição
-			ajax.onreadystatechange
+			ajax.onreadystatechange = () => {
+				console.log(ajax.readyState)
+			}
 
 			ajax.send()
             }
