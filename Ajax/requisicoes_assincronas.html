@@ -14,9 +14,21 @@
             function requisitarPagina(url) {
 
             let ajax = new XMLHttpRequest();
-            ajax.open('GET', url)
-            ajax.send()
-            console.log(ajax)
+			//requisição nao iniciada , state = 0
+			console.log(ajax.readyState)
+
+            
+			//ajax.open('GET', url)
+			//conexão estabelecida com o servidor , state = 1
+			//console.log(ajax.readyState)
+
+            //ajax.send()
+			
+
+			//alguma logica que olhe o progresso da requisição
+			//console.log(ajax.onreadystatechange)
+
+            //console.log(ajax)
             }
 
         </script>
