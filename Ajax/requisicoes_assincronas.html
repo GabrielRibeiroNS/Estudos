@@ -35,7 +35,7 @@
 			//alguma logica que olhe o progresso da requisição
 			ajax.onreadystatechange = () => {
 				if(ajax.readyState == 4) {
-					
+					document.getElementById('loading').remove()
 				}
 				//console.log(ajax.readyState)
 			}
