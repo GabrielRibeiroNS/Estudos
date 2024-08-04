@@ -16,8 +16,10 @@
 			//incluir gif de loading na pagina
 			if(!document.getElementById('loading')){
 
+				//Removendo o gid fe loading caso o mesmo ja esteja na pagina para nao dar conflito
 				document.getElementById('conteudo').innerHTML = ''
 
+				//Criando o Gif de loading na pagina
 				let imgLoading = document.createElement('img')
 				imgLoading.id = 'loading'
 				imgLoading.src = 'loading.gif'
@@ -27,6 +29,8 @@
 			}
 			
             let ajax = new XMLHttpRequest();
+
+			//console.log(ajax.responseText)
 			//requisição nao iniciada , state = 0
 			//console.log(ajax.readyState)
 
@@ -38,7 +42,7 @@
 			ajax.onreadystatechange = () => {
 				if(ajax.readyState == 4 && ajax.status == 200) {
 
-					document.getElementById('conteudo').innerHTML = 'requisição finalizada com sucesso! o Status é 200'
+					document.getElementById('conteudo').innerHTML = ajax.responseText
 					//console.log('O status da requisição é', ajax.status)
 					//console.log('requisição finalizada com sucesso! o Status é 200')
 					//document.getElementById('loading').remove()
