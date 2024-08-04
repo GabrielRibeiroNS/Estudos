@@ -16,6 +16,8 @@
 			//incluir gif de loading na pagina
 			if(!document.getElementById('loading')){
 
+				document.getElementById('conteudo').innerHTML = ''
+
 				let imgLoading = document.createElement('img')
 				imgLoading.id = 'loading'
 				imgLoading.src = 'loading.gif'
@@ -39,7 +41,7 @@
 					document.getElementById('conteudo').innerHTML = 'requisição finalizada com sucesso! o Status é 200'
 					//console.log('O status da requisição é', ajax.status)
 					//console.log('requisição finalizada com sucesso! o Status é 200')
-					document.getElementById('loading').remove()
+					//document.getElementById('loading').remove()
 				}
 
 				if(ajax.readyState == 4 && ajax.status == 404) {
@@ -47,7 +49,7 @@
 					document.getElementById('conteudo').innerHTML = 'requisição finalizada porém o recurso solicitado não foi encontrado infelizmente! o Status é 404'
 					//console.log('O status da requisição é', ajax.status)
 					//console.log('requisição finalizada porém o recurso solicitado não foi encontrado infelizmente! o Status é 404')
-					document.getElementById('loading').remove()
+					//document.getElementById('loading').remove()
 				}
 				//console.log(ajax.readyState)
 			}
